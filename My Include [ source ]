@@ -1,17 +1,3 @@
-Description : this include i want to have a lot of stocks :)
-now containi some stocks for :
-
-ColorPrint(id, " !g I write green, !t i write color-team, !t i write normalyy")
-client_print(id, print_chat, "my name : %s , my ip : %s",Nume(id),Ip(id))
-
-Code :
-
-#include <lordofnothing>
-
-
-Source :
-
-
 #pragma library "lordofnothing"
 
 #include <amxmodx>
