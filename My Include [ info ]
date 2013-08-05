@@ -1,0 +1,24 @@
+Description : 
+this include i want to have a lot of stocks :)
+
+
+ Code to included :
+ 
+    #include <lordofnothin>
+    
+    
+ Version : 1.0
+ 
+ 
+ Credits :  LordOfNothing , Rainq
+ 
+ 
+ String :
+ 
+ 
+ 
+ Nume(id)  // get user name !
+ Ip(id) // get user ip !
+ ColorPrint // exaclty like a client_print ( but only or chat and u can write colorate
+ 
+                      !t - team-color, !g - green, !y - normal
