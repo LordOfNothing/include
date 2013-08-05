@@ -1,0 +1,58 @@
+Description : this include i want to have a lot of stocks :)
+now containi some stocks for :
+
+ColorPrint(id, " !g I write green, !t i write color-team, !t i write normalyy")
+client_print(id, print_chat, "my name : %s , my ip : %s",Nume(id),Ip(id))
+
+Code :
+
+#include <lordofnothing>
+
+
+Source :
+
+
+#pragma library "lordofnothing"
+
+#include <amxmodx>
+
+ 
+
+stock ColorPrint(const id, const input[], any:...)
+{
+new count = 1, players[32]
+static msg[191]
+vformat(msg, 190, input, 3)
+
+replace_all(msg, 190, "!g", "^4")
+replace_all(msg, 190, "!y", "^1")
+replace_all(msg, 190, "!t", "^3")
+
+if (id) players[0] = id; else get_players(players, count, "ch")
+{
+  for (new i = 0; i < count; i++)
+  {
+   if (is_user_connected(players[i]))
+   {
+    message_begin(MSG_ONE_UNRELIABLE, get_user_msgid("SayText"), _, players[i])
+    write_byte(players[i]);
+    write_string(msg);
+    message_end();
+   }
+  }
+ }
+}
+
+
+stock Nume( id )
+{
+   new name [ 32 ];
+   get_user_name( id, name, 31)
+   return name;
+}
+stock Ip( id )
+{
+   new ip [ 33 ];
+   get_user_ip( id, ip, 32)
+   return ip;
+}
